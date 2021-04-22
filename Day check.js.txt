@@ -1,0 +1,50 @@
+!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		How to check if the given
+		date is weekend ?	
+	</title>
+</head>
+
+<body style = "text-align:center;">
+	
+	
+	
+	<button onclick = "gfg_Run()">
+		Click Here
+	</button>
+	
+	<p id = "GFG_DOWN" style = "color:blue;
+		font-size: 20px; font-weight: bold;">
+	</p>
+	
+	<script>
+		var el_up = document.getElementById("GFG_UP");
+		var el_down = document.getElementById("GFG_DOWN");
+		var date = new Date();
+		
+		el_up.innerHTML = "Click on the button to "
+				+ "check if the given date is Weekend"
+				+ " or not.<br>Date = " + date;
+		
+		function gfg_Run() {
+			var day = date.getDay();
+			var ans = (day === 6 || day === 0);
+			
+			if (ans) {
+				ans = "Today is Weekend.";
+			} else {
+				ans = "Today is not Weekend.";
+			}
+			el_down.innerHTML = ans;
+		}
+	</script>
+</body>
+
+</html>
+
+
+
+
